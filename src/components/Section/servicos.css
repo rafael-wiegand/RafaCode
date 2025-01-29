@@ -1,0 +1,47 @@
+/* Contêiner da seção de habilidades */
+.servicos-section{
+    background-color: var(--cor-verde-claro);
+    color: var(--cor-fonte-primaria);
+    padding: 20px;
+} 
+
+.servicos-section .container-servico {
+    display: flex;
+    background-color: var(--cor-verde-claro);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Espaçamento entre as habilidades */
+}
+
+/* Cada habilidade ocupa 50% da largura da tela em telas grandes */
+.servicos-section .container-servico .servicos {
+    width: calc(50% - 10px); /* Subtrai o gap para não ultrapassar o limite */
+    padding: 20px;
+    box-sizing: border-box; /* Para garantir que o padding não quebre o layout */
+}
+
+/* Responsividade: Ajuste para telas menores */
+@media (max-width: 768px) {
+    .servicos-section .container-servico .servicos {
+        width: 100%; /* As habilidades ocupam 100% da largura em telas pequenas */
+    }
+}
+
+/* Estilo para a imagem dentro de cada habilidade */
+.servicos-section .container-servico .servicos .logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* Título da habilidade */
+.servicos-section .container-servico .servicos h3 {
+    font-size: 1.8rem;
+    color: var(--cor-fonte-primaria);
+    margin-top: 10px;
+}
+
+/* Texto da habilidade */
+.servicos-section .container-servico .servicos p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}

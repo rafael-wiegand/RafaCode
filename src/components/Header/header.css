@@ -1,0 +1,198 @@
+.header-container {
+  background-color: var(--cor-verde-escuro);
+  color: var(--cor-fonte-primaria);
+  padding-left: 10px;
+  display: flex;
+  justify-content: space-between; /* Garante que a logo e o menu fiquem nas extremidades */
+  align-items: center; /* Alinha tudo verticalmente no centro */
+  font-family: var(--fonte-primaria);
+  font-size: var(--fonte-padrao);
+  /*padding: 10px 20px; /* Ajuste o padding para ficar mais confortável */
+  transition: all 0.3s ease-in-out;
+}
+
+.header-container .logo:hover h1{
+  color: var(--cor-suave);
+}
+
+.logo h1 {
+  transition: all 0.2s ease-in-out;
+  margin: 10px; /* Remove margem extra da logo */
+}
+
+nav {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os itens dentro do nav */
+  justify-content: flex-end; /* Alinha os itens do menu à direita */
+  width: 100%; /* Faz com que o nav ocupe todo o espaço disponível */
+}
+
+nav input[type="checkbox"] {
+  display: none; /* Esconde o checkbox do menu (caso você tenha um menu tipo hambúrguer) */
+}
+
+nav label {
+  display: block; /* Faz com que o label seja clicável */
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.menu {
+  display: none;
+  position: fixed;
+  top: 25px;
+  right: 15px;
+  width: 30px;
+}
+
+ul.informacoes {
+  display: flex; /* Exibe os itens de navegação em linha */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* Alinha verticalmente */
+}
+
+.informacoes li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+.informacoes li a {
+  color: var(--cor-branca);
+  text-transform: none;
+  font-weight: 500;
+  padding: 5px 20px;
+  border: 2px solid var(--cor-verde-claro);
+  transition: all 0.2s ease-in-out;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  user-select: none;
+}
+.informacoes li a:hover {
+  color: var(--cor-suave); /* Cor de texto ao passar o mouse */
+  border-color: var(--cor-verde-claro); /* Borda fica verde quando passa o mouse */
+}
+
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column; /* Coloca a logo e a navegação em coluna */
+    padding: 10px; /* Ajusta o padding para telas menores */
+  }
+
+  .logo h1 {
+    font-size: 10vw;
+  }
+
+  nav ul {
+    flex-direction: column; /* Coloca os itens de navegação em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Reduz o espaçamento entre os itens */
+  }
+}
+
+/* Para telas médias (de 601px a 1024px) */
+@media (max-width: 1024px) and (min-width: 601px) {
+  .header-container {
+    padding: 15px;
+  }
+
+  nav ul {
+    margin-right: 20px; /* Ajusta o margin para telas médias */
+  }
+}
+
+.header-container .icone{
+  background-color: var(--cor-branca);
+  color: var(--cor-suave);
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 2px;
+  transition: 0.5s ease-in-out;
+  position: fixed;
+}
+
+.header-container .icone:before,
+.header-container .icone:after{
+  background-color: var(--cor-branca);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 0.2s ease-in-out;
+}
+
+.header-container .icone:before{
+  top: -10px;
+}
+
+.header-container .icone:after{
+  bottom: -10px;
+}
+/*
+.header-container input{
+  display: none;
+}*/
+
+.header-container nav ul li a:hover {
+ background-color: var(--cor-verde-escuro);
+}
+
+.header-container input:checked ~ label .icone{
+  transform: rotate(45deg);
+}
+
+.header-container input:checked ~ label .icone:before{
+  transform: rotate(90deg);
+  top: 0;
+} 
+
+
+.header-container input:checked ~ label .icone::after{
+  transform: rotate(90deg);
+  top: 0;
+}
+
+
+@media(max-width: 1280px){
+  .header-container{
+      padding: var(--mobile-padding);
+  }
+}
+
+@media(max-width: 900px){
+  .header-container .menu{
+      display: block;
+  }
+  .header-container nav input:checked ~ ul {
+      display: block;
+  }
+  
+  .header-container nav {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      z-index: 1;
+  }
+
+  .header-container nav ul{
+      display: none;
+      background-color: var();
+      border-radius: 10px;
+  }
+
+  .header-container nav li a {
+    background-color: var(--cor-verde-escuro);
+      color: var(--cor-branca);
+      text-align: center;
+      padding: 10px;
+      display: block;
+  }
+}
+
+
