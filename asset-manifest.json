@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0d1da1a4.css",
+    "main.js": "/static/js/main.654b17fa.js",
+    "static/media/search-engine-optimization.jpg": "/static/media/search-engine-optimization.b7ef075553285e05260a.jpg",
+    "static/media/sobre-nos.jpg": "/static/media/sobre-nos.41264fe5f3a384f6b434.jpg",
+    "static/media/Consultoria-de-Ti.jpg": "/static/media/Consultoria-de-Ti.78dda446a5acd00dd269.jpg",
+    "static/media/Design-de-Sites.jpg": "/static/media/Design-de-Sites.fdd95127bdcbb758f5b5.jpg",
+    "static/media/suporte-tecnico.jpg": "/static/media/suporte-tecnico.e593cc4245363c964dc5.jpg",
+    "index.html": "/index.html",
+    "main.0d1da1a4.css.map": "/static/css/main.0d1da1a4.css.map",
+    "main.654b17fa.js.map": "/static/js/main.654b17fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d1da1a4.css",
+    "static/js/main.654b17fa.js"
+  ]
+}
