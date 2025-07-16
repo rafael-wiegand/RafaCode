@@ -1,7 +1,7 @@
 {
   "name": "primeiro-site",
   "version": "0.1.0",
-  "homepage": "https://rafael-wiegand.github.io/RafaCode",
+  "homepage": "https://rafael-wiegand.github.io/RafaCode/",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
@@ -38,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-dom": "^19.0.3",
     "gh-pages": "^6.3.0"
   }
 }
